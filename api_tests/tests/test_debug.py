@@ -1,7 +1,6 @@
 import requests.exceptions
-
 from api_tests.api_pages.main_api_page import StartPage
-from api_tests.Schemas.start_page import valid_schema
+from api_tests.Schemas.start_page_schemas import valid_schema
 
 URL = 'https://www.dnd5eapi.co'
 
