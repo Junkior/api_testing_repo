@@ -186,3 +186,15 @@ aligment_schema = {
     "results"
   ]
 }
+
+aligment_schema_negative = {
+"type": "object",
+  "properties": {
+    "error": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "error"
+  ]
+}

@@ -2,24 +2,28 @@ from api_tests.request_lib import Client
 from jsonschema import validate
 
 
-class Aligments:
-    def __int__(self, url):
+
+class Backgrounds:
+    def __init__(self, url):
         self.url = url
         self.client = Client
 
-    ALIGMENTS = '/api/aligments'
+    BACKGROUNDS = '/api/backgrounds'
 
-    def get_aligments(self, json_schema):
+
+    def get_backgrounds(self, json_schema):
         """
-        GET aligments information
+        GET backgrounds information
         :param json_schema: valid json schema
         :return: response of request
         """
-        response = self.client.custom_request("GET", f"{self.url}{self.ALIGMENTS}")
+        response = self.client.custom_request("GET", f"{self.url}{self.BACKGROUNDS}")
         validate(instance=response.json(), schema=json_schema)
         return response
 
-    def get_aligments_negative(self, json_schema, additional_url):
+
+
+    def get_backgrounds_negative(self, json_schema, additional_url):
         """
         GET ability-scores with negative scenarios as incorrect url
         :param json_schema: valid error json schema
